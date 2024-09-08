@@ -1,0 +1,78 @@
+@mixin mainColor {
+    color: #0588c5;
+}
+
+@mixin displayFlex(){
+    display: flex;
+    align-items: center;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    padding: 25px 0;
+    width: 100%;
+    background-color: white;
+}
+
+.content{
+    @include displayFlex();
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    & img{
+        width: 200px;
+    }
+}
+
+.search{
+    height: 50px;
+    width: 350px;
+    box-shadow: 0 0 1px black;
+    @include displayFlex();
+    justify-content: space-between;
+    padding: 12px;
+    & input{
+        border: none;
+        outline: none;
+        width: 300px;
+    }
+    & i{
+        font-size: 24px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    & i:hover{
+        @include mainColor();
+    }
+
+}
+
+.icons{
+    @include displayFlex();
+    gap: 50px;
+}
+
+.connect, .basket{
+    @include displayFlex();
+    gap: 15px;
+    @include mainColor();
+    cursor: pointer;
+    font-weight: 600;
+    & span{
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    & i{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 950px){
+    header{
+        display: none;
+    }
+}

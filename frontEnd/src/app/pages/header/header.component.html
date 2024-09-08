@@ -1,0 +1,132 @@
+<header>
+    <div class="container">
+        <div class="content">
+            <i class="bi bi-list" (click)="collapseNav()"></i>
+            <div class="logo">
+                <img src="../../../assets/logo.png" alt="" srcset="">
+            </div>
+            <div class="icons">
+                <div class="connect">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="basket">
+                    <i class="bi bi-cart"></i>
+                </div>
+            </div>
+            <ul class="list">
+                <li class="item">
+                    <a href="">pc gamer<i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="">gaming pc</a></li>
+                        <li><a href="">gaming pack</a></li>
+                        <li><a href="">upgraded pc</a></li>
+                        <li><a href="">superior pc</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="">gaming accessory <i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="">mouse</a></li>
+                        <li><a href="">keyboard</a></li>
+                        <li><a href="">headset</a></li>
+                        <li><a href="">mouse pad</a></li>
+                        <li><a href="">controller</a></li>
+                        <li><a href="">mic</a></li>
+                        <li><a href="">web cams</a></li>
+                        <li><a href="">speakers</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="">monitors</a>
+                </li>
+                <li class="item">
+                    <a href="">laptops</a>
+                </li>
+                <li class="item">
+                    <a href="">components <i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="">mother board</a></li>
+                        <li><a href="">processor</a></li>
+                        <li><a href="">memory card</a></li>
+                        <li><a href="">graphic card</a></li>
+                        <li><a href="">hard disc</a></li>
+                        <li><a href="">ssd</a></li>
+                        <li><a href="">case</a></li>
+                        <li><a href="">power supply</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="">more <i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="">perepheric</a></li>
+                        <li><a href="">video game</a></li>
+                        <li><a href="">security</a></li>
+                        <li><a href="">tv & tablet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<nav [ngClass]="{'showNav': !collapsed}">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="../../../assets/logo.png" alt="" srcset="">
+                <i class="bi bi-x-lg" (click)="collapseNav()"></i>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="">pc gamer</a><i class="bi bi-caret-down-fill" id="firstArrow" (click)="openItem('pcGamer', 'firstArrow')"></i>
+                    <ul id="pcGamer">
+                        <li><a href="">gaming pc</a></li>
+                        <li><a href="">gaming pack</a></li>
+                        <li><a href="">upgraded pc</a></li>
+                        <li><a href="">superior pc</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="">gaming accessory</a><i class="bi bi-caret-down-fill" id="secondArrow" (click)="openItem('accessory', 'secondArrow')"></i>
+                    <ul id="accessory">
+                        <li><a href="">mouse</a></li>
+                        <li><a href="">keyboard</a></li>
+                        <li><a href="">headset</a></li>
+                        <li><a href="">mouse pad</a></li>
+                        <li><a href="">controller</a></li>
+                        <li><a href="">mic</a></li>
+                        <li><a href="">web cams</a></li>
+                        <li><a href="">speakers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="">monitors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">laptops</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">components</a><i class="bi bi-caret-down-fill" id="thirdArrow" (click)="openItem('components', 'thirdArrow')"></i>
+                    <ul id="components">
+                        <li><a href="">mother board</a></li>
+                        <li><a href="">processor</a></li>
+                        <li><a href="">memory card</a></li>
+                        <li><a href="">graphic card</a></li>
+                        <li><a href="">hard disc</a></li>
+                        <li><a href="">ssd</a></li>
+                        <li><a href="">case</a></li>
+                        <li><a href="">power supply</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="">more</a><i class="bi bi-caret-down-fill" id="fourthArrow" (click)="openItem('more', 'fourthArrow')"></i>
+                    <ul id="more">
+                        <li><a href="">perepheric</a></li>
+                        <li><a href="">video game</a></li>
+                        <li><a href="">security</a></li>
+                        <li><a href="">tv & tablet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</nav>
