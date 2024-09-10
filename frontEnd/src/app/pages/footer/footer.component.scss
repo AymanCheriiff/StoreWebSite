@@ -1,0 +1,114 @@
+@mixin displayFlex(){
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}
+
+.logo{
+    width: 100%;
+    @include displayFlex();
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid gray;
+    & img{
+        width: 250px;
+    }
+    & p{
+        font-weight: 500;
+    }
+}
+
+.content, .drop-content{
+    display: flex;
+    & div{
+        flex: 1;
+        min-width: 250px;
+        padding: 50px;
+        font-weight: 500;
+        padding-top: 25px;
+        & a{
+            text-decoration: none;
+            color: gray;
+            text-transform: capitalize;
+        }
+        & p{
+            color: gray;
+        }
+        & a:hover{
+            color: #0588c5;
+        }
+    }
+}
+
+.input{
+    @include displayFlex();
+    padding: 12px 0 !important;
+    height: 45px;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    & button{
+        background-color: black;
+        color: white;
+        border: none;
+        height: 45px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        padding: 0 10px;
+    }
+    & input{
+        height: 40px;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        padding-left: 16px;
+        outline: 0;
+    }
+
+    & input::placeholder{
+        font-size: 14px;
+    }
+}
+
+.drop-content{
+    display: none !important;
+    & div{
+        padding: 15px;
+    }
+    & div h4{
+        box-shadow: 0 0 2px gray;
+        color: black;
+        padding: 12px;
+        cursor: pointer;
+    }
+    ul{
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0 12px;
+        transition: .4s;
+        & li{
+            list-style: none;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .drop-content{
+        display: block !important;
+    }
+    .content{
+        display: none !important;
+    }
+    .logo{
+        border: none;
+    }
+}

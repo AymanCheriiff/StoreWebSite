@@ -1,0 +1,107 @@
+.product{
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    & .container{
+        padding-top: 75px;
+        margin-bottom: 100px;
+    }
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    min-height: 600px;
+    height: fit-content;
+    & .image{
+        width: 500px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        & img{
+            width: 100%;
+            position: absolute;
+            transition: transform 0.3s ease;
+        will-change: transform;
+        }
+    }
+    & .info{
+        max-width: 600px;
+        & span{
+            font-size: 42px;
+            color: #0588c5;
+            font-weight: 700;
+        }
+    }
+    & .slider{
+        width: 50px;
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    & p{
+        margin-right: 12px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    & input{
+        width: 40px;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        box-shadow: 0 0 2px rgb(184, 184, 184);
+        border-radius: 3px;
+        text-align: center;
+        font-weight: 700;
+    }
+    & button{
+        width: 40px;
+        height: 40px;
+        margin-left: 6px;
+        border: none;
+        box-shadow: 3px 3px 5px gray;
+        background-color: white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.cart-button{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    margin-top: 70px;
+    & .cover{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 0;
+        background-color: #05bfc5;
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+}
+
+.cart-button:hover .cover{
+    height: 100% !important;
+}
+
+.btn-busket{
+    background-color: black;
+    width: 300px;
+    height: 50px;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+}
